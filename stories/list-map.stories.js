@@ -7,7 +7,7 @@ const infoBoxTab = 'Infobox Options';
 const contentBoxTab = 'contentBox Options';
 const mapTab = 'Map Options';
 
-const stories = storiesOf('A list of places on a map', module);
+const stories = storiesOf('List map', module);
 stories.addDecorator(withKnobs);
 
 stories.add('with a scrollable list', () => (

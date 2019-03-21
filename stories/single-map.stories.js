@@ -7,7 +7,7 @@ const infoBoxTab = 'Infobox Options';
 const contentBoxTab = 'contentBox Options';
 const mapTab = 'Map Options';
 
-const stories = storiesOf('A single place on a map', module);
+const stories = storiesOf('Single map', module);
 stories.addDecorator(withKnobs);
 
 stories.add('With infoBox', () => (

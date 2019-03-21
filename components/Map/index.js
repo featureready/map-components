@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './styles.scss';
-import { withScriptjs, withGoogleMap, GoogleMap, Marker } from 'react-google-maps';
+import { withScriptjs, withGoogleMap, GoogleMap } from 'react-google-maps';
 
 const Map = props => (
   <GoogleMap defaultOptions={{ mapTypeControl: false }} zoom={props.zoom} center={props.center}>
@@ -9,7 +9,6 @@ const Map = props => (
 );
 
 const WrappedMap = withScriptjs(withGoogleMap(Map));
-
 const LoadingElem = <div className={styles.loading} />;
 const ContainerElem = <div className={styles.container} />;
 const MapElem = <div className={styles.map} />;

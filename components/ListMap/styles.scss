@@ -1,5 +1,5 @@
 .container {
-  height: 400px;
+  height: 100%;
   display: flex;
 }
 
@@ -11,27 +11,12 @@
   }
 }
 
-.loading {
-  height: 100%;
-}
-
-.mapContainer {
-  height: 400px;
-  flex: 5;
-  order: 2;
-}
-
-.map {
-  height: 100%;
-}
-
 .list {
   flex: 2;
   order: 1;
   height: 100%;
   overflow: scroll;
   -webkit-overflow-scrolling: touch;
-  padding: 0 10px;
 }
 
 .carousel {

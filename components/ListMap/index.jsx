@@ -2,11 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from 'react-google-maps';
 import InfoBox from 'react-google-maps/lib/components/addons/InfoBox';
+import Map from '../Map';
 import Cell from '../Cell';
 import styles from './styles.scss';
 
-const Map = ({ zoom, center, places }) => (
-  <GoogleMap defaultOptions={{ mapTypeControl: false }} zoom={zoom} center={center}>
+const ListMap = ({ zoom, center, places }) => (
+  <Map zoom={zoom} center={center}>
     {places.map(({ position: { lat, lng } }) => (
       <Marker
         key={`${lat}_${lng}`}
@@ -16,16 +17,10 @@ const Map = ({ zoom, center, places }) => (
         }}
       />
     ))}
-  </GoogleMap>
+  </Map>
 );
 
-const WrappedMap = withScriptjs(withGoogleMap(Map));
-
-const LoadingElem = <div className={styles.loading} />;
-const ContainerElem = <div className={styles.mapContainer} />;
-const MapElem = <div className={styles.map} />;
-
-Map.propTypes = {
+ListMap.propTypes = {
   zoom: PropTypes.number.isRequired,
   center: PropTypes.shape({
     lat: PropTypes.number,
@@ -41,7 +36,7 @@ Map.propTypes = {
   })
 };
 
-Map.defaultProps = {
+ListMap.defaultProps = {
   zoom: 8,
   center: {
     lat: 0,
@@ -62,14 +57,6 @@ export default props => (
         <Cell key={idx} {...cell} />
       ))}
     </div>
-    <WrappedMap
-      {...props}
-      googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${
-        process.env.GOOGLE_MAPS_API_KEY
-      }&v=3.exp&libraries=geometry,drawing,places`}
-      loadingElement={LoadingElem}
-      containerElement={ContainerElem}
-      mapElement={MapElem}
-    />
+    <ListMap {...props} />
   </div>
 );

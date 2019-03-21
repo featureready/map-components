@@ -16,18 +16,21 @@
   },
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
+    "dotenv": "^7.0.0",
     "next": "^8.0.3",
     "node-sass": "^4.11.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.4",
-    "react-dom": "^16.8.4"
+    "react-dom": "^16.8.4",
+    "react-google-maps": "^9.4.5"
   },
   "devDependencies": {
-    "@storybook/react": "^5.0.3",
+    "@babel/core": "^7.4.0",
     "@storybook/addon-actions": "^5.0.3",
+    "@storybook/addon-knobs": "^5.0.3",
     "@storybook/addon-links": "^5.0.3",
     "@storybook/addons": "^5.0.3",
-    "@babel/core": "^7.4.0",
+    "@storybook/react": "^5.0.3",
     "babel-loader": "^8.0.5"
   }
 }

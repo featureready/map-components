@@ -1,0 +1,22 @@
+.outer {
+  width: 200px;
+  padding: 10px 0;
+  border-top: 1px solid #efefef;
+  display: flex;
+  align-items: center;
+}
+
+.image {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.caption {
+  font-size: 12px;
+  color: #888;
+}

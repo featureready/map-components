@@ -1,0 +1,67 @@
+.container {
+  height: 400px;
+  display: flex;
+}
+
+.carouselContainer {
+  @extend .container;
+  flex-direction: column;
+  .map {
+    height: 80%;
+  }
+}
+
+.loading {
+  height: 100%;
+}
+
+.mapContainer {
+  height: 400px;
+  flex: 5;
+  order: 2;
+}
+
+.map {
+  height: 100%;
+}
+
+.list {
+  flex: 2;
+  order: 1;
+  height: 100%;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+  padding: 0 10px;
+}
+
+.carousel {
+  display: flex;
+}
+
+.infoBox {
+  background-color: white;
+  padding: 20px;
+  width: 255px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.infoBoxIcon {
+  margin-right: 20px;
+  width: 45px;
+  height: 45px;
+}
+
+.infoBoxTitle {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.infoBoxCaption {
+  font-size: 14px;
+  color: #888;
+}

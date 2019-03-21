@@ -1,0 +1,39 @@
+.container {
+  height: 400px;
+}
+
+.loading {
+  height: 100%;
+}
+
+.map {
+  height: 100%;
+}
+
+.infoBox {
+  background-color: white;
+  padding: 20px;
+  width: 255px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.infoBoxIcon {
+  margin-right: 20px;
+  width: 45px;
+  height: 45px;
+}
+
+.infoBoxTitle {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.infoBoxCaption {
+  font-size: 14px;
+  color: #888;
+}

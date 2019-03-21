@@ -12,9 +12,11 @@
     "build": "next build",
     "start": "next start",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "deploy-storybook": "storybook-to-ghpages -- --out=.out"
   },
   "dependencies": {
+    "@storybook/storybook-deployer": "^2.8.1",
     "@zeit/next-sass": "^1.0.1",
     "dotenv": "^7.0.0",
     "next": "^8.0.3",

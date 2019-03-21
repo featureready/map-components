@@ -3,7 +3,11 @@ import styles from './styles.scss';
 import { withScriptjs, withGoogleMap, GoogleMap } from 'react-google-maps';
 
 const Map = props => (
-  <GoogleMap defaultOptions={{ mapTypeControl: false }} zoom={props.zoom} center={props.center}>
+  <GoogleMap
+    defaultOptions={{ mapTypeControl: false }}
+    defaultZoom={props.zoom}
+    defaultCenter={props.center}
+  >
     {props.children}
   </GoogleMap>
 );

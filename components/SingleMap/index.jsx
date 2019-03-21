@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Marker } from 'react-google-maps';
 import Map from '../Map';
 import InfoBox from 'react-google-maps/lib/components/addons/InfoBox';
-import styles from './styles.scss';
+import InfoBoxCard from '../InfoBox';
 
 const SingleMap = ({
   infoBox: {
@@ -27,20 +27,10 @@ const SingleMap = ({
             options={{
               closeBoxURL: ``,
               enableEventPropagation: true,
-              pixelOffset: { width: -150 - x, height: -160 - y }
+              pixelOffset: { width: -150 - x, height: -170 - y }
             }}
           >
-            <div className={styles.infoBox}>
-              {icon && (
-                <div>
-                  <img className={styles.infoBoxIcon} src={icon} />
-                </div>
-              )}
-              <div>
-                <div className={styles.infoBoxTitle}>{infoTitle}</div>
-                <div className={styles.infoBoxCaption}>{infoCaption}</div>
-              </div>
-            </div>
+            <InfoBoxCard icon={icon} title={infoTitle} caption={infoCaption} />
           </InfoBox>
         )}
       </Marker>
